@@ -24,6 +24,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ru" className={`${rmbBody.variable} ${rmbDisplay.variable}`}>
       <head>
+        <meta name="yandex-verification" content="1a9ed0d9740e79d1" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
