@@ -23,7 +23,10 @@ export const viewport: Viewport = { themeColor: '#111313', colorScheme: 'dark', 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru" className={`${rmbBody.variable} ${rmbDisplay.variable}`}>
-      <head />
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body>{children}{process.env.NODE_ENV === 'production' && <Analytics />}</body>
     </html>
   )
